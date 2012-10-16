@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Happen by tmcw</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Happen</h1>
+        <p>make real events happen in-browser, with pure DOM and/or jQuery</p>
+
+        <p class="view"><a href="https://github.com/tmcw/happen">View the Project on GitHub <small>tmcw/happen</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/tmcw/happen/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/tmcw/happen/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/tmcw/happen">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p><strong>happen</strong> wraps the <code>createEvent</code> DOM API to make real
+event mocking in-browser palatable.</p>
+
+<h2>Native API</h2>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'map'</span><span class="p">);</span>
+
+<span class="c1">// click shortcut</span>
+<span class="nx">happen</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+
+<span class="c1">// dblclick shortcut</span>
+<span class="nx">happen</span><span class="p">.</span><span class="nx">dblclick</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+
+<span class="c1">// custom options</span>
+<span class="nx">happen</span><span class="p">.</span><span class="nx">dblclick</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="p">{</span> <span class="nx">shift</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+</pre></div>
+
+<h2>jQuery Plugin</h2>
+
+<div class="highlight"><pre><span class="c1">// Shortcut - 'click' is shorthand for { type: 'click' }</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.foo'</span><span class="p">).</span><span class="nx">happen</span><span class="p">(</span><span class="s1">'click'</span><span class="p">);</span>
+
+<span class="c1">// Longhand - specify any sort of properties</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.foo'</span><span class="p">).</span><span class="nx">happen</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">'keyup'</span><span class="p">,</span> <span class="nx">keyCode</span><span class="o">:</span> <span class="mi">50</span> <span class="p">});</span>
+
+<span class="c1">// Works on any jQuery selection</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.foo, .bar'</span><span class="p">).</span><span class="nx">happen</span><span class="p">(</span><span class="s1">'dblclick'</span><span class="p">);</span>
+</pre></div>
+
+<p>Shortcuts:</p>
+
+<ul>
+<li><code>happen.click</code></li>
+<li><code>happen.dblclick</code></li>
+<li><code>happen.mousedown</code></li>
+<li><code>happen.mouseup</code></li>
+<li><code>happen.mousemove</code></li>
+<li><code>happen.keydown</code></li>
+<li><code>happen.keyup</code></li>
+<li><code>happen.keypress</code></li>
+</ul><p>Use it with a testing framework, like <a href="http://pivotal.github.com/jasmine/">Jasmine</a>
+or Mocha.</p>
+
+<p>Licensed BSD.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/tmcw">tmcw</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
